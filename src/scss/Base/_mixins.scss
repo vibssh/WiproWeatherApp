@@ -1,0 +1,68 @@
+/* Mixins and Functions */
+
+// PX to REM
+$base-font-size: 16px;
+@mixin remsize($prop, $px, $base: $base-font-size) {
+  #{$prop}: $px;
+  #{$prop}: ($px / $base) * 1rem;
+  //
+  //Usage :
+  // @include remsize(font-size, 20px);
+}
+
+/// Asset helper
+
+/// @param {String} $type - Asset type, matching folder name i.e 'background', 'icons', 'logos' etc
+/// @param {String} $file - Asset file name, including extension i.e 'spotlight-hk-full.jpg'
+/// @return {URL} - A `url()` function leading to the asset
+
+$asset-base-path: '../../src/images/' !default;
+
+@function asset($type, $file) {
+  @return url($asset-base-path+'/'+$type+'/'+$file);
+}
+
+/// usage :
+// background: asset('bacckground', 'logo.jpg');
+
+///Font Reference Helper
+/// @param {String} $file - Name of the fonts file ie. FSElliotWeb-Bold.woff
+/// @return {URL} - A `url()` function leading to the asset
+
+$font-base-path: '../../src/fonts/' !default;
+
+@function fonts($file) {
+  @return url($font-base-path+'/'+$file);
+}
+
+// Breakpoint Mixin
+$breakpoints: (
+  'small': (
+    min-width: 767px
+  ),
+  'medium': (
+    min-width: 992px
+  ),
+  'large': (
+    min-width: 1200px
+  )
+) !default;
+
+/// Mixin to manage responsive breakpoints
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin breakpoint($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}

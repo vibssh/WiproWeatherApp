@@ -1,0 +1,231 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito:400, 700');
+
+/* Font Variables */
+$base-font-family: 'Nunito', sans-serif;
+$base-font-weight: 400;
+$bold-font-weight: 700;
+
+/* Line Heights */
+$line-height-xs-mobile: 1.09375;
+$line-height-s-mobile: 1.11111;
+$line-height-l-mobile: 1.25;
+
+$line-height-xs-desktop: 1.04167;
+$line-height-s-desktop: 1.25;
+$line-height-l-desktop: 1.31579;
+
+/* Font-sizes */
+$font-size-base-mobile: 16px;
+$font-size-base-desktop: 19px;
+
+$font-size-lead-mobile: 18px;
+$font-size-lead-desktop: 24px;
+
+$font-size-h1-mobile: 32px;
+$font-size-h1-desktop: 48px;
+
+$font-size-h2-mobile: 24px;
+$font-size-h2-desktop: 36px;
+
+$font-size-h3-mobile: 18px;
+$font-size-h3-desktop: 24px;
+
+$font-size-h4-mobile: 16px;
+$font-size-h4-desktop: 19px;
+
+/* Zero off all margins from text elements */
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+li {
+  font-weight: $base-font-weight;
+  margin: 0;
+}
+
+/* Paragraph Styles - p tag */
+p {
+  @include remsize(font-size, $font-size-base-mobile);
+  line-height: $line-height-l-mobile;
+  margin-bottom: 15px;
+
+  @include breakpoint('medium') {
+    @include remsize(font-size, $font-size-base-desktop);
+    line-height: $line-height-l-desktop;
+    margin-bottom: 20px;
+  }
+
+  // Lead Paragraph
+
+  &.lead {
+    @include remsize(font-size, $font-size-lead-mobile);
+    line-height: $line-height-s-mobile;
+    margin-bottom: 20px;
+
+    @include breakpoint('medium') {
+      @include remsize(font-size, $font-size-lead-desktop);
+      line-height: $line-height-s-desktop;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+/* Headings */
+h1 {
+  @include remsize(font-size, $font-size-h1-mobile);
+  line-height: $line-height-xs-mobile;
+  margin-bottom: 30px;
+
+  @include breakpoint('medium') {
+    @include remsize(font-size, $font-size-h1-desktop);
+    line-height: $line-height-xs-desktop;
+    margin-bottom: 50px;
+  }
+}
+
+h2 {
+  @include remsize(font-size, $font-size-h2-mobile);
+  line-height: $line-height-s-mobile;
+  margin-bottom: 20px;
+
+  @include breakpoint('medium') {
+    @include remsize(font-size, $font-size-h2-desktop);
+    line-height: $line-height-xs-desktop;
+    margin-bottom: 20px;
+  }
+}
+
+h3 {
+  @include remsize(font-size, $font-size-h3-mobile);
+  line-height: $line-height-s-mobile;
+  margin-bottom: 15px;
+
+  @include breakpoint('medium') {
+    @include remsize(font-size, $font-size-h3-desktop);
+    line-height: $line-height-s-desktop;
+    margin-bottom: 20px;
+  }
+}
+
+h4 {
+  @include remsize(font-size, $font-size-h4-mobile);
+  line-height: $line-height-l-mobile;
+  margin-bottom: 15px;
+
+  @include breakpoint('medium') {
+    @include remsize(font-size, $font-size-h4-desktop);
+    line-height: $line-height-l-desktop;
+    margin-bottom: 20px;
+  }
+}
+
+/* Anchor tags */
+
+a {
+  border-bottom: 1px solid $wp-link-colour;
+  color: $wp-link-colour;
+  display: inline-block;
+  line-height: $line-height-l-mobile;
+  margin-bottom: 15px;
+  text-decoration: none;
+  @include remsize(font-size, $font-size-base-mobile);
+
+  @include breakpoint('medium') {
+    @include remsize(font-size, $font-size-base-desktop);
+    line-height: $line-height-l-desktop;
+    margin-bottom: 20px;
+  }
+
+  &:hover {
+    border-color: $wp-link-hover-colour;
+    color: $wp-link-hover-colour;
+  }
+
+  &:visited {
+    border-color: $wp-link-visited-colour;
+    color: $wp-link-visited-colour;
+  }
+
+  &:focus {
+    color: $wp-link-active-colour;
+    outline: 3px solid $wp-focus-colour;
+    outline-offset: 0;
+  }
+}
+
+/* Unordered List */
+ul {
+  li {
+    @include remsize(font-size, $font-size-base-mobile);
+    line-height: $line-height-l-mobile;
+    list-style: none;
+    margin-bottom: 15px;
+
+    @include breakpoint('medium') {
+      @include remsize(font-size, $font-size-base-desktop);
+      line-height: $line-height-s-desktop;
+      margin-bottom: 5px;
+    }
+  }
+
+  &.bulleted {
+    padding-left: 20px;
+
+    li {
+      list-style: disc;
+      margin-left: 16px;
+    }
+  }
+}
+
+/* Ordered List */
+
+ol {
+  padding-left: 20px;
+  li {
+    @include remsize(font-size, $font-size-base-mobile);
+    line-height: $line-height-l-mobile;
+    list-style: decimal;
+    margin-bottom: 15px;
+    margin-left: 16px;
+
+    @include breakpoint('medium') {
+      @include remsize(font-size, $font-size-base-desktop);
+      line-height: $line-height-s-desktop;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+sub, sup {
+  /* Specified in % so that the sup/sup is the
+     right size relative to the surrounding text */
+  font-size: 75%;
+
+  /* Zero out the line-height so that it doesn't
+     interfere with the positioning that follows */
+  line-height: 0;
+
+  /* Where the magic happens: makes all browsers position
+     the sup/sup properly, relative to the surrounding text */
+  position: relative;
+
+  /* Note that if you're using Eric Meyer's reset.css, this
+     is already set and you can remove this rule */
+  vertical-align: baseline;
+}
+
+sup {
+  /* Move the superscripted text up */
+  top: -0.5em;
+}
+
+sub {
+  /* Move the subscripted text down, but only
+     half as far down as the superscript moved up */
+  bottom: -0.25em;
+}

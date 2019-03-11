@@ -1,0 +1,50 @@
+/* Base Styles */
+html {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+@-ms-viewport{
+  width: device-width;
+}
+
+body {
+  background: $wp-white;
+  color: $wp-black;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: $line-height-l-mobile;
+  
+}
+
+hr {
+  background: $wp-grey-2;
+  border: 0;
+  height: 1px;
+  margin: 20px 0;
+
+  &.no-background {
+    background: transparent;
+  }
+}
+
+.row--spacing {
+  margin: 20px 0;
+}
+
+#app {
+  margin: 0 auto;
+  padding: 20px;
+  width: 90%;
+
+  @include breakpoint('medium') {
+    width: 95%;
+  }
+}
+
+.city {
+  color: $wp-light-purple;
+  padding: 20px;
+  text-align: center;
+}
+

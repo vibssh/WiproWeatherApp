@@ -1,0 +1,59 @@
+.card-wrapper {
+  display: block;
+  width: 100%;
+
+  @include breakpoint('medium') {
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  }
+
+}
+
+.card {
+  align-items: center;
+  background: $wp-turquoise;
+  -webkit-box-shadow: -5px 22px 41px -21px rgba(0,0,0,0.75);
+-moz-box-shadow: -5px 22px 41px -21px rgba(0,0,0,0.75);
+box-shadow: -5px 22px 41px -21px rgba(0,0,0,0.75);
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 10px 0;
+
+  @include breakpoint('medium') {
+    flex: 0 0 40%;
+    margin: 30px;
+  }
+
+  @include breakpoint('large') {
+    flex: 1 1 0;
+    margin: 10px;
+  }
+}
+
+.card__image {
+  align-self: center;
+  max-width: 100%;
+}
+
+.card__description {
+  font-weight: $bold-font-weight;
+  text-transform: uppercase;
+}
+
+.card__day, .card__time {
+  color: $wp-white;
+}
+
+.card__temp {
+  color: $wp-white;
+}
+
+.card__temp__deg {
+  color: $wp-black;
+  font-weight: $bold-font-weight;
+  @include remsize(font-size, 18px);
+}

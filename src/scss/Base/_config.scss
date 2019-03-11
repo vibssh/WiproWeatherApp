@@ -1,0 +1,51 @@
+/* Configuaration of Colour, Typography */
+
+/* 1. Colours
+**  =================================================================
+*/
+
+$wp-purple: #2e358b;
+$wp-light-purple: #6f72af;
+$wp-bright-purple: #912b88;
+$wp-pink: #d53880;
+$wp-light-pink: #f499be;
+$wp-red: #b10e1e;
+$wp-bright-red: #df3034;
+$wp-orange: #f47738;
+$wp-brown: #b58840;
+$wp-yellow: #ffbf47;
+$wp-light-green: #85994b;
+$wp-green: #006435;
+$wp-turquoise: #28a197;
+$wp-light-blue: #2b8cc4;
+$wp-blue: #005ea5;
+$wp-black: #0b0c0c;
+$wp-grey-1: #6f777b;
+$wp-grey-2: #bfc1c3;
+$wp-grey-3: #dee0e2;
+$wp-grey-4: #f8f8f8;
+$wp-white: #ffffff;
+
+/* 1.1 Text */
+$wp-text-colour: $wp-black;
+$wp-secondary-text-colour: $wp-grey-1;
+
+/* 1.2 Links */
+$wp-link-colour: $wp-bright-purple;
+$wp-link-hover-colour: $wp-pink;
+$wp-link-visited-colour: $wp-light-purple;
+$wp-link-active-colour: $wp-bright-red;
+
+/* 1.3 Borders */
+$wp-border-colour: $wp-grey-2;
+$wp-input-border-colour: $wp-blue;
+
+/* 1.4 Focus States */
+$wp-focus-colour: $wp-yellow;
+$wp-focus-text-colour: $wp-black;
+
+/* 1.5 Error State */
+$wp-error-colour: $wp-red;
+
+/* 1.6 Brand Colour */
+$wp-brand-colour: $wp-orange;

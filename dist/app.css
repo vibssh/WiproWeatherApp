@@ -1,0 +1,414 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:400, 700);
+/* Base Files */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+/* Utility with config and mixins that can be imported in all components */
+/* Configuaration of Colour, Typography */
+/* 1. Colours
+**  =================================================================
+*/
+/* 1.1 Text */
+/* 1.2 Links */
+/* 1.3 Borders */
+/* 1.4 Focus States */
+/* 1.5 Error State */
+/* 1.6 Brand Colour */
+/* Mixins and Functions */
+/* Font Variables */
+/* Line Heights */
+/* Font-sizes */
+/* Zero off all margins from text elements */
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+ol,
+li {
+  font-weight: 400;
+  margin: 0; }
+
+/* Paragraph Styles - p tag */
+p {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-bottom: 15px; }
+  @media (min-width: 992px) {
+    p {
+      font-size: 19px;
+      font-size: 1.1875rem;
+      line-height: 1.31579;
+      margin-bottom: 20px; } }
+  p.lead {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.11111;
+    margin-bottom: 20px; }
+    @media (min-width: 992px) {
+      p.lead {
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 1.25;
+        margin-bottom: 30px; } }
+
+/* Headings */
+h1 {
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.09375;
+  margin-bottom: 30px; }
+  @media (min-width: 992px) {
+    h1 {
+      font-size: 48px;
+      font-size: 3rem;
+      line-height: 1.04167;
+      margin-bottom: 50px; } }
+
+h2 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.11111;
+  margin-bottom: 20px; }
+  @media (min-width: 992px) {
+    h2 {
+      font-size: 36px;
+      font-size: 2.25rem;
+      line-height: 1.04167;
+      margin-bottom: 20px; } }
+
+h3 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.11111;
+  margin-bottom: 15px; }
+  @media (min-width: 992px) {
+    h3 {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 1.25;
+      margin-bottom: 20px; } }
+
+h4 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-bottom: 15px; }
+  @media (min-width: 992px) {
+    h4 {
+      font-size: 19px;
+      font-size: 1.1875rem;
+      line-height: 1.31579;
+      margin-bottom: 20px; } }
+
+/* Anchor tags */
+a {
+  border-bottom: 1px solid #912b88;
+  color: #912b88;
+  display: inline-block;
+  line-height: 1.25;
+  margin-bottom: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  font-size: 1rem; }
+  @media (min-width: 992px) {
+    a {
+      font-size: 19px;
+      font-size: 1.1875rem;
+      line-height: 1.31579;
+      margin-bottom: 20px; } }
+  a:hover {
+    border-color: #d53880;
+    color: #d53880; }
+  a:visited {
+    border-color: #6f72af;
+    color: #6f72af; }
+  a:focus {
+    color: #df3034;
+    outline: 3px solid #ffbf47;
+    outline-offset: 0; }
+
+/* Unordered List */
+ul li {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  list-style: none;
+  margin-bottom: 15px; }
+  @media (min-width: 992px) {
+    ul li {
+      font-size: 19px;
+      font-size: 1.1875rem;
+      line-height: 1.25;
+      margin-bottom: 5px; } }
+
+ul.bulleted {
+  padding-left: 20px; }
+  ul.bulleted li {
+    list-style: disc;
+    margin-left: 16px; }
+
+/* Ordered List */
+ol {
+  padding-left: 20px; }
+  ol li {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    list-style: decimal;
+    margin-bottom: 15px;
+    margin-left: 16px; }
+    @media (min-width: 992px) {
+      ol li {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.25;
+        margin-bottom: 5px; } }
+
+sub, sup {
+  /* Specified in % so that the sup/sup is the
+     right size relative to the surrounding text */
+  font-size: 75%;
+  /* Zero out the line-height so that it doesn't
+     interfere with the positioning that follows */
+  line-height: 0;
+  /* Where the magic happens: makes all browsers position
+     the sup/sup properly, relative to the surrounding text */
+  position: relative;
+  /* Note that if you're using Eric Meyer's reset.css, this
+     is already set and you can remove this rule */
+  vertical-align: baseline; }
+
+sup {
+  /* Move the superscripted text up */
+  top: -0.5em; }
+
+sub {
+  /* Move the subscripted text down, but only
+     half as far down as the superscript moved up */
+  bottom: -0.25em; }
+
+/* Base Styles */
+html {
+  overflow: hidden;
+  overflow-y: scroll; }
+
+@-ms-viewport {
+  width: device-width; }
+
+body {
+  background: #ffffff;
+  color: #0b0c0c;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  line-height: 1.25; }
+
+hr {
+  background: #bfc1c3;
+  border: 0;
+  height: 1px;
+  margin: 20px 0; }
+  hr.no-background {
+    background: transparent; }
+
+.row--spacing {
+  margin: 20px 0; }
+
+#app {
+  margin: 0 auto;
+  padding: 20px;
+  width: 90%; }
+  @media (min-width: 992px) {
+    #app {
+      width: 95%; } }
+
+.city {
+  color: #6f72af;
+  padding: 20px;
+  text-align: center; }
+
+/* Component Files */
+.card-wrapper {
+  display: block;
+  width: 100%; }
+  @media (min-width: 992px) {
+    .card-wrapper {
+      align-self: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around; } }
+
+.card {
+  align-items: center;
+  background: #28a197;
+  box-shadow: -5px 22px 41px -21px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 10px 0; }
+  @media (min-width: 992px) {
+    .card {
+      flex: 0 0 40%;
+      margin: 30px; } }
+  @media (min-width: 1200px) {
+    .card {
+      flex: 1 1 0;
+      margin: 10px; } }
+
+.card__image {
+  align-self: center;
+  max-width: 100%; }
+
+.card__description {
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.card__day, .card__time {
+  color: #ffffff; }
+
+.card__temp {
+  color: #ffffff; }
+
+.card__temp__deg {
+  color: #0b0c0c;
+  font-weight: 700;
+  font-size: 18px;
+  font-size: 1.125rem; }
+
